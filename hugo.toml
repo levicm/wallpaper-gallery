@@ -1,0 +1,47 @@
+baseURL = 'https://wallpapers.levimota.com/'
+languageCode = 'en-us'
+title = 'Gallery'
+theme = 'gallery'
+copyright = "© Levi Mota"
+defaultContentLanguage = "en"
+disableKinds = ["taxonomy"]
+enableRobotsTXT = true
+
+[params]
+  defaultTheme = "dark"
+  title = "My Gallery"
+  [params.author]
+    email = "levi.mota@gmail.com"
+    name = "Levi Mota"
+  [params.socialIcons]
+    instagram = "https://www.instagram.com/"
+    github = "https://github.com/levicm/"
+    email = "mailto:levi.mota@gmail.com"
+    website = "https://www.levimota.com"
+  [params.gallery]
+    #boxSpacing = 10
+    #targetRowHeight = 288
+    #targetRowHeightTolerance = 0.25
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML"]
+
+[imaging]
+  quality = 75
+  resampleFilter = "CatmullRom"
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+    includeFields = "ImageDescription|Orientation"
+
+[menu]
+  [[menu.footer]]
+    name = "GitHub"
+    url = "https://github.com/levicm/"
+    weight = 3
+
+[services]
+  [services.rss]
+    limit = 100
